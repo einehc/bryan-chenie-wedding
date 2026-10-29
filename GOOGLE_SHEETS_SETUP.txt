@@ -1,0 +1,19 @@
+Google Sheets RSVP setup
+
+1. Open the target Google Sheet:
+   https://docs.google.com/spreadsheets/d/1OcIq332_G7ECLt9RKjCFknBtrFFO_cMU/edit
+
+2. Open Extensions > Apps Script.
+3. Copy the contents of google-apps-script.gs into the Apps Script editor and save.
+4. Select Deploy > New deployment.
+5. Choose Web app.
+6. Set Execute as: Me.
+7. Set Who has access: Anyone.
+8. Deploy and authorize the script.
+9. Copy the Web app URL ending in /exec.
+10. In script.js, set:
+
+   const RSVP_ENDPOINT="PASTE_THE_WEB_APP_URL_HERE";
+
+The script creates an RSVP sheet tab automatically and adds these columns:
+Timestamp, Name, Email, Attendance, Guests, Message
