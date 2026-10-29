@@ -127,7 +127,7 @@ const rsvpModal=document.getElementById("rsvpModal");
 const rsvpModalMessage=document.getElementById("rsvpModalMessage");
 const rsvpModalClose=document.getElementById("closeRsvpModal");
 const rsvpModalDone=document.getElementById("rsvpModalDone");
-const RSVP_ENDPOINT="";
+const RSVP_ENDPOINT="https://script.google.com/macros/s/AKfycbx8g0hGkXV_V9eCI8QaaZkW79Rqvw8Q50bMVCIL_APnekQb1eaHZaq5xXU6Z2FmHiR7/exec";
 function showRsvpModal(message){
   rsvpModalMessage.textContent=message;
   rsvpModal.classList.add("open");
@@ -156,10 +156,10 @@ rsvpForm.addEventListener("submit",async e=>{
   const response=Object.fromEntries(d.entries());
   localStorage.setItem("bryanChenieRsvp",JSON.stringify(response));
   formMessage.classList.remove("success","error");
-  if(!RSVP_ENDPOINT){
-    showRsvpModal(`Thank you, ${response.name}! Your RSVP has been saved.`);
-      rsvpForm.reset();
-      return;
+  if(!RSVP_ENDPOINT || RSVP_ENDPOINT==="PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE"){
+    formMessage.textContent="RSVP delivery is not configured yet. Please contact Bryan & Chenie directly.";
+    formMessage.classList.add("error");
+    return;
   }
   formMessage.textContent="Sending your RSVP...";
   try{
