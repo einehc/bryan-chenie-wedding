@@ -1,7 +1,7 @@
 Google Sheets RSVP setup
 
 1. Open the target Google Sheet:
-   https://docs.google.com/spreadsheets/d/1OcIq332_G7ECLt9RKjCFknBtrFFO_cMU/edit
+   https://docs.google.com/spreadsheets/d/11HhtO90yfpTv36akDXkOHAmBiC5A7BcIdkRGPJV8NGo/edit
 
 2. Open Extensions > Apps Script.
 3. Copy the contents of google-apps-script.gs into the Apps Script editor and save.
