@@ -1,7 +1,7 @@
 
 function setupRSVPSheet() {
   const ss = SpreadsheetApp.openById(
-    "1OcIq332_G7ECLt9RKjCFknBtrFFO_cMU"
+    "11HhtO90yfpTv36akDXkOHAmBiC5A7BcIdkRGPJV8NGo"
   );
 
   let sheet = ss.getSheetByName("RSVP");
