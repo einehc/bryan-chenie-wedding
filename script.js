@@ -127,7 +127,7 @@ const rsvpModal=document.getElementById("rsvpModal");
 const rsvpModalMessage=document.getElementById("rsvpModalMessage");
 const rsvpModalClose=document.getElementById("closeRsvpModal");
 const rsvpModalDone=document.getElementById("rsvpModalDone");
-const RSVP_ENDPOINT="https://script.google.com/macros/s/AKfycbwWqfWadaNWfyfmNZxSszaej7zBBIFjAyXygaeVAnbkY3jQh-Wc3lRsK3a1nVBVDKWDCw/exec";
+const RSVP_ENDPOINT="https://script.google.com/macros/s/AKfycbx9v1-Gw64aIt3tFyqjKgEoo-8SeZePhDPZjPhEJxZ-6MuKqmi7rZylG8wi5HZuyIJ9yg/exec";
 function showRsvpModal(message){
   rsvpModalMessage.textContent=message;
   rsvpModal.classList.add("open");
