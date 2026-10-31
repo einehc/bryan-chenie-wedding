@@ -127,6 +127,9 @@ const rsvpModal=document.getElementById("rsvpModal");
 const rsvpModalMessage=document.getElementById("rsvpModalMessage");
 const rsvpModalClose=document.getElementById("closeRsvpModal");
 const rsvpModalDone=document.getElementById("rsvpModalDone");
+const storyModal=document.getElementById("storyModal");
+const storyModalOpen=document.getElementById("openStoryModal");
+const storyModalClose=document.getElementById("closeStoryModal");
 const RSVP_ENDPOINT="https://script.google.com/macros/s/AKfycbx9v1-Gw64aIt3tFyqjKgEoo-8SeZePhDPZjPhEJxZ-6MuKqmi7rZylG8wi5HZuyIJ9yg/exec";
 function showRsvpModal(message){
   rsvpModalMessage.textContent=message;
@@ -175,3 +178,9 @@ rsvpModalClose.addEventListener("click",closeRsvpModal);
 rsvpModalDone.addEventListener("click",closeRsvpModal);
 rsvpModal.addEventListener("click",event=>{if(event.target===rsvpModal) closeRsvpModal()});
 document.addEventListener("keydown",event=>{if(event.key==="Escape" && rsvpModal.classList.contains("open")) closeRsvpModal()});
+storyModalOpen.addEventListener("click",event=>{
+  event.preventDefault();
+  storyModal.showModal();
+});
+storyModalClose.addEventListener("click",()=>storyModal.close());
+storyModal.addEventListener("click",event=>{if(event.target===storyModal) storyModal.close()});
