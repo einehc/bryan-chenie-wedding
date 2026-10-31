@@ -223,7 +223,7 @@ h1,h2,h3,.monogram,.paper-border strong{font-family:"Playfair Display",serif!imp
 .details .detail-card h3{font-size:32px;line-height:1.1}
 .details .map-link{font-size:11px;border-bottom:1px solid transparent;transition:border-color .25s}
 .details .map-link:hover{border-color:var(--pink)}
-.entourage{max-width:none;background:#fff}
+.entourage{max-width:none;background:linear-gradient(rgba(255,250,247,.92),rgba(255,250,247,.92)),url("images/floral-background.png") center/cover no-repeat}
 .entourage>h2{margin-bottom:42px}
 .entourage-layout{max-width:980px;margin:auto;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(240px,.8fr);gap:44px;text-align:left}
 .entourage-roles>h3,.attire-guide>h3{font-size:30px;color:var(--navy);margin:0 0 22px}
@@ -236,25 +236,28 @@ h1,h2,h3,.monogram,.paper-border strong{font-family:"Playfair Display",serif!imp
 .dress .lead{font-size:16px;line-height:1.75}
 @media(max-width:700px){.entourage-layout{grid-template-columns:1fr;gap:32px}.attire-guide{border-left:0;border-top:1px solid var(--line);padding:30px 0 0}.roles-grid{column-gap:18px}}
 
-.story-section{width:100%;padding:clamp(72px,10vw,130px) 7%;background:var(--ivory)}
+.story-section{width:100%;padding:clamp(72px,10vw,130px) 7%;background:linear-gradient(rgba(255,250,247,.92),rgba(255,250,247,.92)),url("images/floral-background.png") center/cover no-repeat}
 .story-layout{max-width:1120px;margin:auto;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:clamp(40px,8vw,110px)}
+.story-photo-column{text-align:center}
 .story-photo{position:relative;margin:0;padding:12px;border:1px solid var(--pink)}
 .story-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center}
-.story-copy{text-align:center}
+.story-copy{text-align:left}
 .story-open-link{display:inline-block;padding:15px 20px;border:1px solid var(--pink);color:var(--navy);font:600 13px Lora,serif;text-decoration:none;transition:background .2s,color .2s}
+.story-photo-column .story-open-link{margin-top:22px}
 .story-open-link:hover,.story-open-link:focus-visible{background:var(--pink);color:#fff}
 .story-open-link:focus-visible{outline:2px solid var(--navy);outline-offset:4px}
-.story-reading{max-height:min(62vh,560px);overflow-y:auto;overscroll-behavior:contain;padding:20px 24px;background:#fff;border:1px solid var(--line);text-align:left;scrollbar-color:var(--pink) var(--pink-soft);scrollbar-width:thin}
-.story-reading:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
-.story-reading p{max-width:560px;font:16px/1.9 Lora,serif;color:var(--ink);margin:0 0 16px}
+.story-reading{max-height:none;overflow:visible;padding:0;background:transparent;border:0;text-align:center}
+.story-reading p{max-width:560px;font:italic 18px/1.9 Lora,serif;color:var(--ink);margin:0 auto 16px}
 .story-reading p:last-child{margin-bottom:0}
-@media(max-width:700px){.story-section{padding:75px 7%}.story-layout{grid-template-columns:1fr;gap:24px}.story-photo{width:min(100%,480px);margin:auto}.story-reading{max-height:min(58svh,500px);padding:18px}}
-.story-modal{width:min(720px,calc(100% - 32px));max-width:none;max-height:min(88vh,780px);padding:0;border:1px solid var(--pink);background:var(--ivory);color:var(--ink);box-shadow:0 18px 50px rgba(5,12,27,.3)}
+@media(max-width:700px){.story-section{padding:75px 7%}.story-layout{grid-template-columns:1fr;gap:38px}.story-photo{width:min(100%,480px);margin:auto}.story-copy{text-align:center}.story-copy .lead{margin-left:auto;margin-right:auto}}
+.story-modal{width:min(720px,calc(100% - 32px));max-width:none;max-height:min(88vh,780px);overflow-y:auto;overscroll-behavior:contain;padding:0;border:1px solid var(--pink);background:linear-gradient(rgba(255,250,247,.88),rgba(255,250,247,.88)),url("images/floral-background.png") center/cover no-repeat;color:var(--ink);scrollbar-color:var(--pink) var(--pink-soft);scrollbar-width:thin;box-shadow:0 18px 50px rgba(5,12,27,.3)}
+.story-modal::-webkit-scrollbar{width:10px}
+.story-modal::-webkit-scrollbar-track{background:var(--pink-soft)}
+.story-modal::-webkit-scrollbar-thumb{background:var(--pink);border:2px solid var(--pink-soft)}
 .story-modal::backdrop{background:rgba(5,12,27,.76);backdrop-filter:blur(3px)}
 .story-modal-card{position:relative;padding:48px 38px 38px}
-.story-modal-card>.eyebrow{color:var(--pink);text-align:center}
-.story-modal-card h2{max-width:560px;font-size:42px;text-align:center;margin:10px auto 24px}
+.story-modal-title{margin:0 auto 24px;text-align:center;color:var(--navy);font:34px/1.15 "Universal Exploration Script",Allura,cursive!important}
 .story-modal-close{position:absolute;top:8px;right:12px;border:0;background:transparent;color:var(--navy);font-size:30px;line-height:1;cursor:pointer}
 .story-modal-close:focus-visible{outline:2px solid var(--pink);outline-offset:4px}
-@media(max-width:700px){.story-modal{max-height:90vh}.story-modal-card{padding:46px 18px 20px}.story-modal-card h2{font-size:32px}.story-reading{max-height:65vh;padding:16px}.story-reading p{font-size:15px}}
+@media(max-width:700px){.story-modal{max-height:90vh}.story-modal-card{padding:46px 18px 20px}.story-modal-title{font-size:30px}.story-reading p{font-size:17px}}
 

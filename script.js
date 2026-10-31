@@ -183,4 +183,4 @@ storyModalOpen.addEventListener("click",event=>{
   storyModal.showModal();
 });
 storyModalClose.addEventListener("click",()=>storyModal.close());
-storyModal.addEventListener("click",event=>{if(event.target===storyModal) storyModal.close()});
+storyModal.addEventListener("cancel",event=>event.preventDefault());
