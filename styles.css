@@ -243,7 +243,7 @@ h1,h2,h3,.monogram,.paper-border strong{font-family:"Playfair Display",serif!imp
 .story-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center}
 .story-copy{text-align:left}
 .story-open-link{display:inline-block;padding:15px 20px;border:1px solid var(--pink);color:var(--navy);font:600 13px Lora,serif;text-decoration:none;transition:background .2s,color .2s}
-.story-photo-column .story-open-link{margin-top:22px}
+.story-photo-column .story-open-link{display:table;margin:22px auto 0}
 .story-open-link:hover,.story-open-link:focus-visible{background:var(--pink);color:#fff}
 .story-open-link:focus-visible{outline:2px solid var(--navy);outline-offset:4px}
 .story-reading{max-height:none;overflow:visible;padding:0;background:transparent;border:0;text-align:center}

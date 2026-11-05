@@ -118,8 +118,6 @@ lightboxNext.addEventListener("click",()=>showGalleryImage(galleryIndex+1));
 showGalleryImage(0);
 function closeBox(){lightbox.classList.remove("open");lightbox.setAttribute("aria-hidden","true")}
 document.getElementById("closeLightbox").addEventListener("click",closeBox);
-lightbox.addEventListener("click",e=>{if(e.target===lightbox)closeBox()});
-document.addEventListener("keydown",e=>{if(e.key==="Escape")closeBox()});
 
 const rsvpForm=document.getElementById("rsvpForm");
 const formMessage=document.getElementById("formMessage");
